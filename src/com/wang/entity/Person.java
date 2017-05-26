@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.wang.utils;
+package com.wang.entity;
 
 import com.wang.annotation.isNotNull;
 import com.wang.exception.BaseException;
@@ -12,15 +12,16 @@ import com.wang.exception.BaseException;
  */
 public class Person {
 
-	@isNotNull(clz = BaseException.class, errorCode = "1000")
+	
 	public String name;
 	
-	@isNotNull(clz = BaseException.class)
+	
 	public int age;
 	
-	@isNotNull(clz = BaseException.class)
+	
 	public String remark;
 
+	@isNotNull(clz = BaseException.class, errorCode = "1001")
 	public String getName() {
 		return name;
 	}
@@ -29,6 +30,7 @@ public class Person {
 		this.name = name;
 	}
 
+	@isNotNull(clz = BaseException.class)
 	public int getAge() {
 		return age;
 	}
@@ -37,6 +39,7 @@ public class Person {
 		this.age = age;
 	}
 
+	@isNotNull(clz = BaseException.class)
 	public String getRemark() {
 		return remark;
 	}
